@@ -1,0 +1,232 @@
+﻿
+
+body {
+    overflow-x: hidden;
+
+}
+
+header {
+    background-color: #131010;
+    padding: 5px 0px 5px 30px;
+    margin: -10px -8px 0px -10px;
+    color: #ffffff;
+}
+
+    header h1 {
+        font-family: Baskerville Old Face, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 30px;
+    }
+
+    header img {
+        font-size: 12px;
+        width: 80px;
+        height: 80px;
+    }
+
+.back_icon {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+li {
+    display: block;
+    color: #f5f5f5;
+    margin: 0px 0px 5px 0px;
+    padding: 0px 0px 5px 0px;
+    text-decoration: none;
+    float: right;
+}
+
+div.nav_container a {
+    color: #252525;
+    margin: 15px 0px 15px 10px;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
+    div.nav_container a:hover {
+        background-color: #B9B4C7;
+        border-radius: 5px;
+        color: #252525;
+    }
+
+nav {
+    overflow: hidden;
+    font-size: 24px;
+    font-weight: normal;
+    font-family: Roboto 'Times New Roman', Times, serif;
+}
+
+div.nav_container {
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial Rounded MT;
+    margin: 25px 0px 20px 0px;
+    padding: 15px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+.column_profile {
+    float: left;
+    width: 35%;
+    padding: 0px 20px 20px 20px;
+    height: 90%;
+    display: block;
+    margin-left: 5%;
+    background-color: #B9B4C7;
+}
+
+.column_changePassword {
+    float: right;
+    width: 35%;
+    padding: 0px 10px 10px 10px;
+    height: 90%;
+    display: block;
+    margin-right: 8%;
+    background-color: #B9B4C7;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 780px) {
+    .column_profile {
+        width: 90%;
+        margin: auto;
+    }
+
+    .column_changePassword {
+        width: 90%;
+        margin-right: 6% ;
+    }
+
+    #editProfile_container {
+        background-color: #B9B4C7;
+    }
+}
+
+#editProfile_container {
+    background-color: #B9B4C7;
+    width: 100%;
+}
+
+.profile_section, .changePassword_section {
+    background-color: #e6e6e6;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 15px;
+    border: 1px solid #252525;
+}
+
+#profilePicture {
+    padding: 5px;
+    width: 25%;
+    height: 25%;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    background-color: #B9B4C7;
+    border: 3px solid #f5f5f5;
+}
+
+h2 {
+    text-align: center;
+    font-weight: normal;
+    font-family: 'Arial Rounded MT';
+    font-size: 18px;
+    text-decoration: underline;
+    padding: 10px;
+}
+
+p {
+    text-align: center;
+    padding: 0px 20px 15px 20px;
+}
+
+textarea {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 2px solid #252525;
+    height: 100px;
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+}
+
+h3 {
+    margin: 6%;
+}
+
+input[type=text], input[type=password] {
+    margin: 5px auto;
+    padding: 10px;
+}
+
+#Button1, #Button2, #Button3, #Button4, #Button5, #Button6 {
+    padding: 10px;
+    border: 2px solid #252525;
+    height: 30%;
+    width: 30%;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #252525;
+    border-radius: 5px;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+
+#Button2, #Button4, #Button6 {
+    margin-left: 30px;
+}
+
+    #Button1:hover, #Button2:hover, #Button3:hover, #Button4:hover, #Button5:hover, #Button6:hover {
+        background-color: #B9B4C7;
+        border-radius: 5px;
+        color: #252525;
+    }
+
+#FileUpload1 {
+    font-size: 16px;
+    padding: 10px;
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    background-color: #B9B4C7;
+    border: 3px solid #f5f5f5;
+    text-align: center;
+}
+
+div.scroll {
+    overflow-y: scroll;
+    width: 1000px;
+    height: 390px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #E4E2F7;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9180BB;
+    border-radius: 4px;
+}
