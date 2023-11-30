@@ -12,27 +12,6 @@ namespace Bouqs
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Set the current username in TextBox1
-            if (!IsPostBack)
-            {
-                // Check if the user is logged in
-                if (Session["LoggedIn"] != null && (bool)Session["LoggedIn"])
-                {
-
-                    Login.Text = "Profile";
-                    Login.NavigateUrl = "UserProfilePage.aspx";
-
-                }
-                else
-                {
-                    // If not logged in, set the default values
-                    Login.Text = "Login";
-                    Login.NavigateUrl = "LoginPage.aspx";
-                }
-            }
-
-
-
             if (!IsPostBack)
             {
                 // Populate Flower Types
@@ -47,7 +26,6 @@ namespace Bouqs
                 ViewState["SelectedProducts"] = new List<string>();
             }
         }
-
 
         protected void SelectProduct(object sender, EventArgs e)
         {
@@ -103,14 +81,15 @@ namespace Bouqs
                         ProductDetails productDetails = GetProductDetailsByName(productName);
 
                         // Use parameterized query to prevent SQL injection
-                        string insertQuery = "INSERT INTO product_table (product_name, product_unit_price, product_desc, product_category) " +
-                                             "VALUES (@ProductName, @UnitPrice, @Description, @Category)";
+                        string insertQuery = "INSERT INTO product_table (product_name, product_unit_price, product_picture, product_desc, product_category) " +
+                                             "VALUES (@ProductName, @UnitPrice, @Picture, @Description, @Category)";
 
                         using (SqlCommand command = new SqlCommand(insertQuery, connection))
                         {
                             // Add parameters for each column
                             command.Parameters.AddWithValue("@ProductName", productDetails.Name);
                             command.Parameters.AddWithValue("@UnitPrice", productDetails.UnitPrice);
+                            command.Parameters.AddWithValue("@Picture", productDetails.Picture);
                             command.Parameters.AddWithValue("@Description", productDetails.Description);
                             command.Parameters.AddWithValue("@Category", productDetails.Category);
 
@@ -129,12 +108,26 @@ namespace Bouqs
         // You need to implement this method to retrieve product details based on the product name
         private ProductDetails GetProductDetailsByName(string productName)
         {
+            // Replace this with your actual data retrieval logic from the database
+            // You need to query the database to get the details of the selected product
+            // and return a ProductDetails object with the details.
+
+            // Example:
+            // SELECT product_unit_price, product_picture, product_desc, product_category
+            // FROM product_table
+            // WHERE product_name = @productName
+
+            // Execute the query and return the result as a ProductDetails object
+            // ...
+
+            // For now, let's assume a simple mapping
             return new ProductDetails
             {
                 Name = productName,
-                UnitPrice = 0.00M,
-                Description = "Custom Bouquet",
-                Category = "Custom"
+                UnitPrice = 0.00M,  // You need to fetch the actual price from your data source
+                Picture = "custom_image.jpg",  // You need to fetch the actual picture from your data source
+                Description = "Custom Bouquet",  // You can customize this as needed
+                Category = "Custom"  // This can be used to distinguish custom products
             };
         }
 
@@ -143,6 +136,7 @@ namespace Bouqs
         {
             public string Name { get; set; }
             public decimal UnitPrice { get; set; }
+            public string Picture { get; set; }
             public string Description { get; set; }
             public string Category { get; set; }
 
@@ -177,6 +171,7 @@ namespace Bouqs
         {
             public string Name { get; set; }
             public decimal UnitPrice { get; set; }
+            public string Picture { get; set; }
             public string Description { get; set; }
             public string Category { get; set; }
 
@@ -184,6 +179,7 @@ namespace Bouqs
             {
                 Name = name;
                 UnitPrice = price;
+                Picture = picture;
                 Description = description;
                 Category = category;
             }
