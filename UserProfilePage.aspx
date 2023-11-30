@@ -77,9 +77,9 @@
         <nav>
             <a href="HomePage.aspx">Home</a>
             <a href="AboutUs.aspx">About Us</a>
-            <a href="#">Contact US</a>
-            <a href="#">Shop</a>
-            <a href="#">Cart</a>
+            <a href="ContactPage.aspx">Contact US</a>
+            <a href="Shop.aspx">Shop</a>
+            <a href="Cart.aspx">Cart</a>
 
             <!-- Update the login button with an ID and a data attribute to store the default href
             once the user success login the label text will change to Profile-->
@@ -108,7 +108,7 @@
 
             </div>
 
-            <!-- Edit/ Upload / View Recipe -->
+            <!-- Edit/ Upload / View Purchase History -->
             <div class="column_view">
                 <nav class="view_edit_bar">
                     <ul>
