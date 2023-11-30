@@ -157,8 +157,8 @@
             <a href="HomePage.aspx">Home</a>
             <a href="AboutUs.aspx">About Us</a>
             <a href="ContactPage.aspx">Contact US</a>
-            <a href="ShopPage.aspx">Shop</a>
-            <a href="#">Cart</a>
+            <a href="Shop.aspx">Shop</a>
+            <a href="Cart.aspx">Cart</a>
             <!-- Update the login button with an ID and a data attribute to store the default href
             once the user success login the label text will change to Profile-->
             <asp:HyperLink ID="Login" runat="server"></asp:HyperLink>
