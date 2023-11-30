@@ -111,10 +111,10 @@ namespace Bouqs
             return new ProductDetails
             {
                 Name = productName,
-                UnitPrice = 0.00M,  // You need to fetch the actual price from your data source
-                Picture = "custom_image.jpg",  // You need to fetch the actual picture from your data source
-                Description = "Custom Bouquet",  // You can customize this as needed
-                Category = "Custom"  // This can be used to distinguish custom products
+                UnitPrice = 0.00M, 
+                Picture = "custom_image.jpg", 
+                Description = "Custom Bouquet",
+                Category = "Custom"
             };
         }
 
