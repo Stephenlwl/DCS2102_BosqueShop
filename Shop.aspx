@@ -190,6 +190,7 @@
             }
         });
     </script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -197,11 +198,11 @@
         <img class="logoName" src="Images/FlowerShopLogo.png" />
         <hr style="border: 3px solid #808080; border-radius: 5px;" />
         <nav>
-            <a href="HomePage.aspx">Home</a>
+            <a href="#">Home</a>
             <a href="AboutUs.aspx">About Us</a>
-            <a href="ContactPage.aspx">Contact US</a>
-            <a href="Shop.aspx">Shop</a>
-            <a href="Cart.aspx">Cart</a>
+            <a href="#">Contact US</a>
+            <a href="#">Shop</a>
+            <a href="#">Cart</a>
             <!-- Update the login button with an ID and a data attribute to store the default href
             once the user success login the label text will change to Profile-->
             <asp:HyperLink ID="Login" runat="server"></asp:HyperLink>
