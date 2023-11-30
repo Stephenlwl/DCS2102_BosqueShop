@@ -15,6 +15,7 @@ namespace Bouqs
         {
             public string ProductName { get; set; }
             public decimal UnitPrice { get; set; }
+            public string ProductPicture { get; set; }
             public string Description { get; set; }
             public string Category { get; set; }
         }
@@ -23,19 +24,6 @@ namespace Bouqs
         {
             if (!IsPostBack)
             {
-                // Check if the user is logged in
-                if (Session["LoggedIn"] != null && (bool)Session["LoggedIn"])
-                {
-                    Login.Text = "Profile";
-                    Login.NavigateUrl = "UserProfilePage.aspx";
-                }
-                else
-                {
-                    // If not logged in, set the default values
-                    Login.Text = "Login";
-                    Login.NavigateUrl = "LoginPage.aspx";
-                }
-
                 // Retrieve data from the flower_table in bouqsDB database
                 List<CartItem> cartItems = GetCartItemsFromDatabase();
 
@@ -72,6 +60,7 @@ namespace Bouqs
                             .Select(row => new CartItem
                             {
                                 ProductName = row.Field<string>("product_name"),
+                                ProductPicture = row.Field<string>("product_picture"),
                                 Description = row.Field<string>("product_desc"),
                                 Category = row.Field<string>("product_category"),
                                 UnitPrice = GetDecimalValue(row, "product_unit_price")
