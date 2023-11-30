@@ -108,19 +108,6 @@ namespace Bouqs
         // You need to implement this method to retrieve product details based on the product name
         private ProductDetails GetProductDetailsByName(string productName)
         {
-            // Replace this with your actual data retrieval logic from the database
-            // You need to query the database to get the details of the selected product
-            // and return a ProductDetails object with the details.
-
-            // Example:
-            // SELECT product_unit_price, product_picture, product_desc, product_category
-            // FROM product_table
-            // WHERE product_name = @productName
-
-            // Execute the query and return the result as a ProductDetails object
-            // ...
-
-            // For now, let's assume a simple mapping
             return new ProductDetails
             {
                 Name = productName,
